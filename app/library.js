@@ -27,6 +27,38 @@ module.exports = {
 		    return"Geometric";
 		else
 		    return -1;
+	},
+
+	findMinMax: (array) =>
+	{
+		if(array.length < 1) return 0;
+
+		  let minValue = array[0];
+		  let maxValue = array[0];
+		  let outputArray = [];
+		  for (let i = 0; i < array.length; i++) {
+		        if (array[i] < minValue) 
+		        {
+		            minValue = array[i];
+		        }
+		        
+		        if(array[i] > maxValue)
+		        {
+		          maxValue = array[i];
+		        }
+		    }
+		    
+		    if(minValue === maxValue)
+		    {
+		      outputArray.push(minValue);
+		    }
+		    else
+		    {
+		      
+		      outputArray.push(minValue);
+		      outputArray.push(maxValue);
+		    }
+		    return outputArray;
 	}
 }
 
